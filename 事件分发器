@@ -1,0 +1,43 @@
+不使用c#的event关键字，只是使用delegate和hashtable进行事件分发。
+
+public interface IEvent
+{
+  string type{get;set;}
+  
+  object target{get;set;}
+}
+
+public interface IEventDispatcher
+{
+  //参数多选eventtype,eventName,和eventId
+  bool addEventListener(string eventType,EventDelegate delegate);
+  
+  bool addEventListener(string eventType,);
+  
+  public removeAllEventListeners();
+  
+  public bool dispatchEvent();
+  
+  bool hasEventListener(string eventType,EventDelegate delegate);
+}
+
+namespace 
+{
+  public delegate void EventDelegate(IEvent event);
+
+  public enum EventDispatcherAddMode
+  {
+  }
+  
+  public class EventDispatcher : IEventDispatcher
+  {
+  }
+  
+ }
+ 
+ 
+ 消息中心负责监听、连接事件
+ 
+ https://github.com/XINCGer/ColaFrameWork
+ https://www.cnblogs.com/msxh/p/9539231.html
+ 
