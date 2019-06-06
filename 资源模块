@@ -1,0 +1,16 @@
+Resource Module作为核心模块包括以下功能：
+1）资源打包
+2）路径定义
+3）资源管理
+4）资源调试
+
+对Unity的AssetBundle接口进行完整封装，使得运行模式下
+
+Unity3D加载外部资源：
+1）Resources.Load
+2)AssetBundle
+
+本质并无区别：
+1）Resources.Load是从一个缺省打进程序包的AssetBundle里加载资源
+2）一般AssetBundle文件需要自己创建，然后运行时动态加载，可以指定路径和来源
+
