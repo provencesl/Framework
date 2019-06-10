@@ -1,0 +1,24 @@
+Pool对象池技术：
+
+对象池主要解决两个主要问题：
+1）首先，在Update之中频繁实例化GameObject,就会消耗大量性能。update函数之中，为保证高帧率，
+每一毫秒都会非常具有价值。尽可能低消耗高效率保持Update时间。
+2）其次，GC运行时会严重消耗游戏帧率，内存分配越多，影响越大。
+
+public class ObjectPool{
+
+  private GameObject prefab;
+  private List<GameObject> pool;
+  
+  
+
+}
+
+对象池无非存取操作，
+GetObj();
+SetObj();
+
+https://blog.csdn.net/frank901/article/details/72830982
+
+对象池和享元模式之间很相似，但不同：
+享元模式和对象池的最大区别：
