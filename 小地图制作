@@ -1,0 +1,28 @@
+1）制作地图使用Camera 渲染出来的Render Texture
+
+原理上，
+使用摄像机从上到下获得场景游戏物体，摄像机Culling Mask渲染层级
+可设置是否需要在小地图上展示游戏物体，将摄像机获得的场景实时在NGUI
+上Texture中
+
+canvas中绘制MinMap的UI，即创建Raw Image对象
+Raw Image的Texture目标是MinMap
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Minimap : MonoBehaviour {
+
+	public Transform player;
+
+	void LateUpdate ()
+	{
+		Vector3 newPosition = player.position;
+		newPosition.y = transform.position.y;
+		transform.position = newPosition;
+
+		transform.rotation = Quaternion.Euler(90f, player.eulerAngles.y, 0f);
+	}
+
+}
