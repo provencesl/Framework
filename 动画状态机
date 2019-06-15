@@ -1,0 +1,17 @@
+状态机动画Animator:
+
+Animation和Animator文件的命名，格式是：
+Animation Clip:<model_name>_<animation_name>.anim
+Animator:<model_name>.controller
+
+//Trigger状态机触发，类似transition
+mAnimator.SetTrigger("Idle");
+
+SetBool():
+Bool表示在一段时间内保持为真的状态
+
+触发类型适合表示在短时间内发生的动作，，
+
+也可以使用SetBool模拟一段时间内发生的动作
+即，SetBool(clipName,"true")表示开启动画，在下一帧的时候SetBool(clipName,"false")表示关闭动画。
+
