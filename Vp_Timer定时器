@@ -1,0 +1,9 @@
+Vp_Timer:
+
+一共包含3个类：
+Vp_Timer:,通过Vp_Timer().In()  加入定时器事件
+Event
+Handle
+
+Vp_Timer.In():
+定时器一段事件后，就会执行某操作
