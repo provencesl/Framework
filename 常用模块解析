@@ -1,0 +1,34 @@
+1）Main Manager
+2) Level Manager
+3) GUI Manager
+4) AudioManager
+5）PoolManager
+6) GameManager
+7) SaveManager:配置&存储管理
+8）MenuManager
+
+当谈到一个Unity3d项目时，如何架构分层也是重点。
+
+设计如下：
+1)UI 框架
+2） 主要逻辑框架
+3）资源管理
+4）数据管理
+5）网络
+这么5大类
+
+如果将这些层级接着细分的话，
+主要逻辑框架：
+编辑器、角色行为框架、AI框架、地图场景和寻路框架、Shader和特效、设备平台
+资源管理：
+AssertBundle资源管理、prefab资源管理
+数据管理：
+内存数据管理、外部数据管理
+【同时也省略了部分功能模块】
+
+
+
+膜拜大佬：
+http://www.luzexi.com/2018/07/27/Unity3D%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E4%B9%8B%E8%BF%9B%E9%98%B6%E4%B8%BB%E7%A8%8B-UI7.html
+
+
