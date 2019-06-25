@@ -1,0 +1,12 @@
+游戏中功能答题包括：
+1）玩家控制 和 界面实时显示
+2） 操控相机移动
+3） 单位信息UI展示
+4）鼠标输入控制
+5） AI控制【】
+6：战争生产和消耗
+7、一些简单的特效
+
+https://blog.csdn.net/zjw1349547081/article/details/53409051
+
+详细参考  LockstepFramework-Master
