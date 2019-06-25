@@ -1,0 +1,23 @@
+使用缓存池调用频繁使用的特效、
+
+public class GameEffectManager{
+
+  //特效池
+  Dictionary<int,List<GameEffect>> effectPool = new Dictionary<int,List<GameEffect>>();
+  
+  //添加特效到世界
+  public GameEffect AddWordEffect(int effectId,Vector3 pos,float scale){
+  
+  GameEffect go = GetEffect(effectId,pos);
+    if(go == null)
+      return null;
+      go.transform.position = pos;
+      go.Play(scale);
+      return go;
+  
+  
+  }
+  
+
+
+}
