@@ -1,0 +1,60 @@
+编辑器扩展的命名空间：
+[MenuItem]
+添加菜单栏按钮
+
+[MenuItem("MyTool/test",false,priority)]
+第一个参数用来表示菜单的路径；
+第二个参数用来判断是否是有效函数，是否需要显示
+第三个参数priority是优先级，用来表示菜单按钮的先后
+注意需要静态方法
+
+
+
+Unity编辑器扩展的主要场景：
+1）场景一：
+绘制重要区域
+OnDrawGizmos和OnDrawGizmosSelected回调函数
+点击Gizmos按钮即可在Game下看到线框
+
+2)组织面板上的参数，添加滑动条，Header,空白等
+
+[Space(10)]
+public float MaximumHeight;
+public float MinimumHeight;
+
+[Header("Safe Frame")]
+[Range(0f,1f)]
+public float SafeFrameTop;
+[Range(0f,1f)]
+public float SafeFrameButtom;
+
+
+
+
+常用Unity Node Editor: 结点编辑器
+
+
+
+
+
+
+
+
+
+
+
+
+public class CreateAssert : Editor
+{
+  [MenuItem（“CreateAsset/Asset”）]
+  static void Create()
+  {
+    ScriptObject bullet = ScriptableObject.CreateInstance<Bullet>();
+    
+    if(!bullet)
+    {
+    
+    }
+  }
+
+}
